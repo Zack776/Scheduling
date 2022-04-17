@@ -41,6 +41,16 @@ public class Schedule {
 		public void requires(Job j) {
 			edges.add(j);
 		}
+		
+		public int Edgesin() {
+			return this.edges.size();
+		}
+		
+		public boolean isNeighbor() {
+			if() {
+				
+			}
+		}
 		/*
 		public int start() {
 			// Case 1: Valid times
@@ -78,6 +88,28 @@ public class Schedule {
 		Schedule.Job j1 = this.jobList.get(index);
 		return j1;
 		
+	}
+	public ArrayList<Job> getTopsort(Schedule s){
+		ArrayList<Job> topsort = new ArrayList<>(); // for top sort
+		Queue<Job> jobQueue = new LinkedList<>(); // for jobs with no edges in
+		// compute in-degree of each job in the schedule:
+		for(Job jobs: s.jobList) {
+			if(jobs.Edgesin() == 0) {
+				// add to a queue of type job.
+				jobQueue.add(jobs);
+			}
+		}
+		while(!jobQueue.isEmpty()) {
+			Job newJob = jobQueue.remove(); // removes a job from head of queue.
+			topsort.add(newJob);
+			for() {
+				
+			}
+		}
+		//
+		//
+		//
+		return topsort;
 	}
 
 }
